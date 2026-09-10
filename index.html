@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tempo de Vida</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            }
+
+            body {
+                background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1.5rem;
+                color: #1e293b;
+            }
+
+            .card {
+                background: #ffffff;
+                width: 100%;
+                max-width: 420px;
+                padding: 2rem;
+                border-radius: 12px;
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+                border: 1px solid #e2e8f0;
+            }
+
+            .card h1 {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: #0f172a;
+                margin-bottom: 0.5rem;
+                text-align: center;
+            }
+
+            .card hr {
+                border: 0;
+                height: 1px;
+                background-color: #e2e8f0;
+                margin-bottom: 1.5rem;
+            }
+
+            .form-group {
+                margin-bottom: 1.25rem;
+            }
+
+            label {
+                display: block;
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: #475569;
+                margin-bottom: 0.4rem;
+            }
+
+            input[type="text"],
+            input[type="number"] {
+                width: 100%;
+                padding: 0.65rem 0.85rem;
+                font-size: 0.95rem;
+                border: 1px solid #cbd5e1;
+                border-radius: 8px;
+                background-color: #f8fafc;
+                color: #0f172a;
+                outline: none;
+                transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+            }
+
+            input[type="text"]:focus,
+            input[type="number"]:focus {
+                border-color: #3b82f6;
+                background-color: #ffffff;
+                box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+            }
+
+            .actions {
+                display: flex;
+                gap: 0.75rem;
+                margin-top: 1.5rem;
+            }
+
+            input[type="submit"],
+            input[type="reset"] {
+                flex: 1;
+                padding: 0.7rem 1rem;
+                font-size: 0.95rem;
+                font-weight: 600;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: transform 0.1s, background-color 0.2s, box-shadow 0.2s;
+            }
+
+            input[type="submit"] {
+                background-color: #2563eb;
+                color: #ffffff;
+                box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+            }
+
+            input[type="submit"]:hover {
+                background-color: #1d4ed8;
+            }
+
+            input[type="reset"] {
+                background-color: #f1f5f9;
+                color: #475569;
+                border: 1px solid #cbd5e1;
+            }
+
+            input[type="reset"]:hover {
+                background-color: #e2e8f0;
+                color: #1e293b;
+            }
+
+            input[type="submit"]:active,
+            input[type="reset"]:active {
+                transform: scale(0.98);
+            }
+        </style>
+    </head>
+    <body>
+        <main class="card">
+            <h1>Tempo de vida</h1>  
+            <hr>
+            <!--
+                 Crie uma aplicação em PHP que receba, por meio de um formulário,
+                 o nome e o ano de nascimento de uma pessoa.
+                 Com esses dados deverá calcular e exibir:
+                 -A idade atual da pessoa;
+                 -A quantidade aproximada de dias, horas e minutos que ela já viveu;
+                 -A quantidade aproximada de batimentos cardíacos que seu coração já deu,
+                 considerando uma média de 75 batimentos por minuto;
+                 -Quantos anos de vida restam, considerando uma expectativa de vida média de 90 anos;
+                 -A quantidade de respirações que ela já deu, e quantas restam,
+                 considerando uma média de 20 respirações por minuto e considerando a expectativa de vida de 90 anos;
+                 -Quantos batimentos cardíacos ainda restam,
+                 considerando uma expectativa de vida média de 90 anos.
+
+                 ATENÇÃO:
+                 Se a pessoa já tiver ultrapassado essa expectativa,
+                 o sistema deve exibir uma mensagem informando isso, em vez de um valor negativo
+             -->
+            <form action="calcular.php" method="post">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="ano">Ano de nascimento:</label>
+                    <input type="number" id="ano" name="ano" placeholder="Ex: 2000" required min="1900" max="2026">
+                </div>
+
+                <div class="actions">
+                    <input type="submit" value="Calcular">
+                    <input type="reset" value="Limpar">
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
