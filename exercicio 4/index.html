@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmácia Paracetaloka</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--A farmácia Paracetaloka deseja calcular o total do pedido de seus clientes com base na faixa etária e cartão fidelidade. Crie um sistema que obtenha o nome do cliente, total do pedido, escolha a faixa etária e se o pagamento é por cartão fidelidade. Assuma que: Idade < 50: Sem desconto; Idade entre 51-70: 5% de desconto; Idade >= 70: 7% de desconto. Se o cartão fidelidade for selecionado, o cliente terá mais 5% de desconto. -->
+<body>
+    <main class="container">
+        <div class="card">
+            <header class="card-header">
+                <span class="card-badge">Atendimento</span>
+                <h1 class="card-title">Farmácia Paracetaloka</h1>
+                <p class="card-subtitle">Cálculo de pedidos com desconto por idade e fidelidade</p>
+            </header>
+
+            <form action="calculos.php" method="post">
+                <div class="form-group">
+                    <label class="form-label" for="nome">Nome do Cliente:</label>
+                    <input class="form-input" type="text" id="nome" name="nome" placeholder="Ex: Maria da Silva" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="total">Total do Pedido (R$):</label>
+                    <input class="form-input" type="text" id="total" name="total" placeholder="Ex: 150,75" required>
+                </div>
+                
+                <div class="form-group">
+                    <span class="form-label">Faixa Etária:</span>
+                    <div class="options-group">
+                        <label class="radio-label">
+                            <input type="radio" name="idade" value="0" required>
+                            <span>Menos de 50 anos (Sem desconto)</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="idade" value="1" required>
+                            <span>Entre 51 e 70 anos (5% de desconto)</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="idade" value="2" required>
+                            <span>Mais de 70 anos (7% de desconto)</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <span class="form-label">Benefício Fidelidade:</span>
+                    <label class="checkbox-label" for="cartao">
+                        <input type="checkbox" id="cartao" name="cartao">
+                        <span>Possui Cartão Fidelidade (+5% de desconto)</span>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="parcelas">Quantidade de Parcelas:</label>
+                    <input class="form-input" type="number" id="parcelas" name="parcelas" min="1" max="6" value="6" placeholder="Ex: 6" required>
+                </div>
+                
+                <input class="btn btn-primary" type="submit" value="Calcular Pedido">
+            </form>
+        </div>
+    </main>
+</body>
+</html>
