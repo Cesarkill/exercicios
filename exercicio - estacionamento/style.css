@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0a0a0a;
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #00ff66;
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+hr {
+    width: 100%;
+    max-width: 320px;
+    border: none;
+    border-top: 1px solid #262626;
+    margin-bottom: 24px;
+}
+
+form,
+.container,
+.result-card {
+    width: 100%;
+    max-width: 320px;
+    padding: 24px;
+    background: #111111;
+    border: 1px solid #262626;
+    border-radius: 8px;
+}
+
+p {
+    margin-bottom: 18px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #bdbdbd;
+}
+
+p > label {
+    display: block;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    background: #0a0a0a;
+    border: 1px solid #303030;
+    border-radius: 5px;
+    color: #00ff66;
+    font: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="number"]:focus {
+    border-color: #00ff66;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #00ff66;
+    margin: 6px;
+    cursor: pointer;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 14px;
+    margin: 4px 4px 0 0;
+    border-radius: 5px;
+    font: 600 0.8rem 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+input[type="submit"] {
+    background: #00ff66;
+    color: #0a0a0a;
+    border: 1px solid #00ff66;
+}
+
+input[type="submit"]:hover {
+    background: #00d957;
+    border-color: #00d957;
+}
+
+input[type="reset"] {
+    background: transparent;
+    color: #bdbdbd;
+    border: 1px solid #303030;
+}
+
+input[type="reset"]:hover {
+    background: #1a1a1a;
+}
+
+h2 {
+    padding: 12px;
+    background: #0a0a0a;
+    border: 1px solid #262626;
+    border-radius: 5px;
+    color: #00ff66;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}

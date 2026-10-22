@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estacionamento</title>
+    <link rel="stylesheet" href="style-easypark.css">
+</head>
+<body>
+    <h1> Easy Park </h1>
+    <hr>
+
+    <form action="calcular.php" method="post">
+      
+        <p>
+        <label for="h">Horas</label>
+        <input type="number" name="horas">
+        </p>
+
+        <label for="idade">Veículo</label><br>
+        <input type="radio" name="veiculo" value="0">Carro<br>
+        <input type="radio" name="veiculo" value="1">Moto<br>
+        
+        <label for="cartao">Lavagem</label>
+        <input type="checkbox" id="lavagem" name="lavagem">
+        <label for="cartao">Sim</label><br><br>
+
+        <input type="submit" value="calcular">
+        <input type="reset" value="limpar">
+    </form>
+</body>
+</html>
