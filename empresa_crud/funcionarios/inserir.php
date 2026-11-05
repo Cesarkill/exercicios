@@ -1,18 +1,15 @@
 <?php
-    $nome = $_POST["nome"];
-    $email = $_POST["email"];
-    $cargo = $_POST["cargo"];
-    $salario = $_POST["salario"];
-    $data_admissao = $_POST["data_admissao"];
+require_once("../conexao.php");
 
-    $SQL = "INSERT INTO funcionarios (nome, email, cargo, salario, data_admissao) 
-            VALUES ('$nome', '$email', '$cargo', $salario, '$data_admissao')";
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$cargo = $_POST['cargo'];
+$salario = $_POST['salario'];
+$data_admissao = $_POST['data_admissao'];
 
-    require_once("../conexao.php");
+$sql = "insert into funcionario (nome, email, cargo, salario, data_admissao) values ('$nome', '$email', '$cargo', '$salario', '$data_admissao')";
 
-    $resposta = mysqli_query($conexao, $SQL);
+mysqli_query($result, $sql);
 
-    if ($resposta == true) {
-        header("Location: ../listar.php");
-    }
+header("Location: listar.php");
 ?>
