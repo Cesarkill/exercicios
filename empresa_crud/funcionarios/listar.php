@@ -1,7 +1,7 @@
 <?php
 require_once("../conexao.php");
 
-$sql = "select * from funcionario order by id";
+$sql = "select * from funcionarios order by id";
 $lista = mysqli_query($result, $sql);
 ?>
 <!DOCTYPE html>
